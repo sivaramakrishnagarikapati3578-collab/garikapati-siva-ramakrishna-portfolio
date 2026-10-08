@@ -212,7 +212,7 @@ export const myself = {
   trailerUrl: '',
   filmUrl: '',
   materials: [
-    { label: 'Poster', src: '', note: 'Poster in preparation', shape: 'poster' },
+    { label: 'Poster', src: '/images/myself-poster.webp', note: 'Official poster', shape: 'poster' },
     { label: 'Director’s note', text: '', note: 'Director’s note to be published with the film', shape: 'page' },
   ] as Material[],
   btsNote: 'More behind-the-scenes photographs to follow',
@@ -231,7 +231,7 @@ export const tfi = {
   /** Paste the YouTube link of the film here. */
   watchUrl: '',
   /** Optional thumbnail / poster image. */
-  image: '',
+  image: '/images/tfi-poster.jpeg',
 }
 
 /* ── WRITING ─────────────────────────────────────────────────────────────── */

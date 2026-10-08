@@ -38,7 +38,19 @@ function PentayyaCard() {
 }
 
 function TfiCard() {
-  if (tfi.image) return <img src={tfi.image} alt={`${tfi.title} – ${tfi.subtitle}`} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+  // Portrait poster in a landscape frame: show it whole (contain), never cropped.
+  if (tfi.image)
+    return (
+      <div className="absolute inset-0 bg-ink-3">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_80%,rgba(143,42,28,0.35),transparent_60%)]" />
+        <img
+          src={tfi.image}
+          alt={`${tfi.title} – ${tfi.subtitle} poster`}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-contain py-4 sm:py-6"
+        />
+      </div>
+    )
   return (
     <div className="absolute inset-0 flex items-center justify-center bg-ink-3">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_80%,rgba(143,42,28,0.35),transparent_60%)]" />
