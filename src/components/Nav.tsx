@@ -51,7 +51,7 @@ export function Nav() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,color,border-color,padding] duration-700 ${
+        className={`fixed inset-x-0 top-0 z-50 print:hidden transition-[background-color,color,border-color,padding] duration-700 ${
           solid ? 'border-b border-ink/10 bg-ivory py-3.5 text-ink' : 'border-b border-transparent py-5 text-ivory sm:py-7'
         }`}
       >
@@ -88,7 +88,7 @@ export function Nav() {
       <div
         id="mobile-menu"
         aria-hidden={!open}
-        className={`fixed inset-0 z-40 flex flex-col bg-ink text-ivory transition-[opacity,visibility] duration-700 lg:hidden ${
+        className={`fixed inset-0 z-40 flex flex-col bg-ink text-ivory print:hidden transition-[opacity,visibility] duration-700 lg:hidden ${
           open ? 'visible opacity-100' : 'invisible opacity-0'
         }`}
       >

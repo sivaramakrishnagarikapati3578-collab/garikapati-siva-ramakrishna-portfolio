@@ -2,7 +2,9 @@ import { SectionLink } from '../components/Nav'
 import { Picture } from '../components/Picture'
 import { Arrow, Container, SectionLabel } from '../components/ui'
 import { delay } from '../lib/motion'
+import { profile } from '../content/profile'
 import { about, photos, vision } from '../content/site'
+import { profileHref } from '../lib/router'
 
 export function About() {
   return (
@@ -45,6 +47,15 @@ export function About() {
               Read the director’s vision <Arrow />
             </SectionLink>
           </blockquote>
+
+          <p data-reveal style={delay(450)} className="eyebrow mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-stone">
+            <a href={profileHref} className="inline-flex items-center gap-3 transition-colors hover:text-ink">
+              Filmmaker profile <Arrow />
+            </a>
+            <a href={profile.pdf.href} download={profile.pdf.fileName} className="link-line pb-0.5 transition-colors hover:text-ink">
+              Download PDF
+            </a>
+          </p>
         </div>
       </Container>
     </section>

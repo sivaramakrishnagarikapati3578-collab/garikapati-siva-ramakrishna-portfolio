@@ -1,4 +1,4 @@
-# Garikapati Siva Ramakrishna — Writer | Director
+# Garikapati Siva Ramakrishna — Writer | Director | Actor
 
 Portfolio website. React + TypeScript + Vite + Tailwind CSS. No other dependencies.
 
@@ -62,3 +62,19 @@ src/
   sections/         home page sections
   pages/            Home, PentayyaPage, MyselfPage
 ```
+
+## Filmmaker profile (one-page A4 PDF)
+
+- Web page: `/#/profile` (linked from About and Contact)
+- PDF: `public/profile/Garikapati-Siva-Ramakrishna-Filmmaker-Profile.pdf`
+  → live at `/profile/Garikapati-Siva-Ramakrishna-Filmmaker-Profile.pdf`
+- Content: `src/content/profile.ts` · Layout: `src/components/ProfileSheet.tsx` + `src/profile.css`
+
+After editing the profile, regenerate the PDF (needs Chrome/Chromium installed locally):
+
+```bash
+npm run profile:pdf
+```
+
+New professional photo: export a portrait-orientation JPEG (≈ 0.52 width/height, e.g. 1040×2000)
+to `public/images/profile/portrait.jpg`, adjust `portrait.position` / `webSrc` in `profile.ts`, then run `npm run profile:pdf`.

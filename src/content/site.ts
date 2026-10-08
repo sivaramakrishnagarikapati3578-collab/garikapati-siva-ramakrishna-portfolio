@@ -43,8 +43,9 @@ export const person = {
   firstLine: 'Garikapati',
   name: 'Siva Ramakrishna',
   fullName: 'Garikapati Siva Ramakrishna',
-  roles: ['Writer', 'Director'],
-  roleShort: 'Writer | Director',
+  roles: ['Writer', 'Director', 'Actor'],
+  roleShort: 'Writer | Director | Actor',
+  positioning: ['Filmmaker', 'Screenwriter', 'Performer'],
   basedIn: 'Hyderabad, India',
   from: 'Guntur, Andhra Pradesh',
   language: 'Telugu',
@@ -98,9 +99,9 @@ export const photos = {
 /* ── ABOUT ───────────────────────────────────────────────────────────────── */
 
 export const about = {
-  heading: 'A Telugu writer–director, drawn to the lives that rarely reach the screen.',
+  heading: 'A Telugu writer, director and actor, drawn to the lives that rarely reach the screen.',
   intro: [
-    'Garikapati Siva Ramakrishna is a Telugu writer-director from Guntur, Andhra Pradesh, currently based in Hyderabad. His interest in cinema began in childhood and grew into a serious pursuit during his college years.',
+    'Garikapati Siva Ramakrishna is a Telugu writer, director and actor from Guntur, Andhra Pradesh, currently based in Hyderabad. His interest in cinema began in childhood and grew into a serious pursuit during his college years.',
     'He has written and directed two independent short films and has completed feature screenplays including Pentayya and Kanna Prema. His writing is drawn toward real people, lesser-known realities, different ways of life and the emotional conflicts that sit beneath everyday experience.',
     'As a filmmaker, he wants to tell stories with a raw, authentic quality that still connect with audiences through simple, universal human emotions.',
   ],
@@ -132,12 +133,14 @@ export const pentayya = {
   title: 'Pentayya',
   titleTelugu: 'పెంటయ్య',
   type: 'Feature Film',
-  role: 'Writer',
-  status: 'Feature screenplay completed',
-  genre: 'Telugu drama — rural, emotional',
+  genre: 'Rural Action Drama',
+  roles: ['Writer', 'Director'],
+  status: 'Feature screenplay completed | 137 pages | SWA Registered',
   setting: 'Pedhapuram, Palnadu region, Andhra Pradesh',
   protagonist: 'Pentayya, a 29-year-old agricultural labourer',
-  pages: 'Approx. 136-page bound screenplay',
+  pages: '137 pages · SWA Registered',
+  logline:
+    'Set in the Palnadu region, it follows an ordinary agricultural labourer whose peaceful life is destroyed by power, injustice and personal loss, pushing him toward a dangerous journey of revenge.',
   characters: [
     { name: 'Pentayya', note: '29 · Agricultural labourer' },
     { name: 'Parijatham', note: '' },
@@ -158,9 +161,8 @@ export const pentayya = {
 }
 
 export const pentayyaFacts: [string, string][] = [
-  ['Format', pentayya.type],
-  ['Writer', person.fullName],
-  ['World', pentayya.genre],
+  ['Format', `${pentayya.type} | ${pentayya.genre}`],
+  ['Credit', `${pentayya.roles.join(' | ')} — ${person.fullName}`],
   ['Setting', pentayya.setting],
   ['Protagonist', pentayya.protagonist],
   ['Screenplay', pentayya.pages],
@@ -174,7 +176,7 @@ export const myself = {
   type: 'Independent Short Film',
   year: '2026',
   roles: ['Writer', 'Director', 'Cinematographer', 'Editor'],
-  status: 'Production — shoot in progress',
+  status: 'Independent film in production',
   genre: 'Comedy / Drama',
   logline:
     'A young man’s inner conflict, played out by three characters — Siva, Brain and Heart — all played by the same actor.',
@@ -222,7 +224,7 @@ export const tfi = {
   slug: 'tfi',
   number: '03',
   title: 'TFI',
-  subtitle: 'Telogodi Fan Ism',
+  subtitle: 'Telugodi Fan Ism',
   type: 'Independent Short Film',
   year: '2025',
   roles: ['Writer', 'Director', 'Actor'],
@@ -258,8 +260,8 @@ export const disciplines = [
 /* ── FILMOGRAPHY ─────────────────────────────────────────────────────────── */
 
 export const filmography = [
-  { year: '2026', title: 'MYSELF – Brain vs Heart', credits: 'Writer / Director / Cinematographer / Editor', format: 'Short Film', status: 'In Production', href: '#/work/myself' },
-  { year: '2025', title: 'TFI – Telogodi Fan Ism', credits: 'Writer / Director / Actor', format: 'Short Film', status: 'Released', href: '' },
+  { year: '2026', title: 'MYSELF – Brain vs Heart', credits: 'Writer | Director | Cinematographer | Editor', format: 'Independent Short Film', status: 'In production', href: '#/work/myself' },
+  { year: '2025', title: 'TFI – Telugodi Fan Ism', credits: 'Writer | Director | Actor', format: 'Independent Short Film', status: 'Released', href: '' },
 ]
 
 /* ── ABOUT THE FILMMAKER (detailed) ──────────────────────────────────────── */
@@ -267,14 +269,14 @@ export const filmography = [
 export const filmmaker = {
   bio: [
     'Cinema has been part of Siva’s life since childhood in Guntur. In his third year of college it became a serious pursuit — from then on he worked toward becoming a director, learning by writing and by making.',
-    'His first independent short film, TFI – Telogodi Fan Ism, was released in 2025; he wrote, directed and acted in it. His second, MYSELF – Brain vs Heart, is currently being shot — he wrote and directed it and is also handling its cinematography and editing.',
+    'His first independent short film, TFI – Telugodi Fan Ism, was released in 2025; he wrote, directed and acted in it. His second, MYSELF – Brain vs Heart, is currently being shot — he wrote and directed it and is also handling its cinematography and editing.',
     'Alongside the short films he has written two complete feature screenplays, Pentayya and Kanna Prema. He is now writing his next screenplay and is involved as a writer on an upcoming film and a web series.',
     'He studied Computer Science & Engineering and has worked as an R&D Engineer since 2025. He is now completing his notice period there as he moves from his software career toward filmmaking.',
   ],
   journey: [
     ['Childhood', 'Guntur — cinema becomes an interest.'],
     ['College, 3rd year', 'Begins working seriously toward becoming a director.'],
-    ['2025', 'TFI – Telogodi Fan Ism — first released short film.'],
+    ['2025', 'TFI – Telugodi Fan Ism — first released short film.'],
     ['2026', 'MYSELF – Brain vs Heart — in production.'],
     ['Now', 'Hyderabad — writing the next screenplay; writer on an upcoming film and web series.'],
   ] as [string, string][],
@@ -294,5 +296,5 @@ export const filmmaker = {
 /* ── SEO (also edit index.html for link previews) ───────────────────────── */
 
 export const seo = {
-  title: 'Garikapati Siva Ramakrishna | Writer & Director',
+  title: 'Garikapati Siva Ramakrishna | Writer | Director | Actor',
 }

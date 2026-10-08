@@ -7,16 +7,24 @@ import { scrollToSection, useRoute } from './lib/router'
 import { Home } from './pages/Home'
 import { MyselfPage } from './pages/MyselfPage'
 import { PentayyaPage } from './pages/PentayyaPage'
+import { ProfilePage } from './pages/ProfilePage'
 
 const projectPages: Record<string, { el: () => React.JSX.Element; title: string }> = {
   [pentayya.slug]: { el: PentayyaPage, title: `${pentayya.title} — Feature Film | ${person.fullName}` },
   [myself.slug]: { el: MyselfPage, title: `Myself – ${myself.subtitle} — Short Film | ${person.fullName}` },
 }
 
+const profilePage = { el: ProfilePage, title: `Filmmaker Profile | ${person.fullName}` }
+
 export default function App() {
   const route = useRoute()
-  const project = route.page === 'project' ? projectPages[route.slug] : undefined
-  const pageKey = project ? `project:${route.page === 'project' ? route.slug : ''}` : 'home'
+  const project =
+    route.page === 'project'
+      ? projectPages[route.slug]
+      : route.page === 'profile'
+        ? profilePage
+        : undefined
+  const pageKey = route.page === 'profile' ? 'profile' : project ? `project:${route.page === 'project' ? route.slug : ''}` : 'home'
   const lastPage = useRef(pageKey)
 
   useReveal(pageKey)

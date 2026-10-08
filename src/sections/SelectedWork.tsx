@@ -27,7 +27,7 @@ function PentayyaCard() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_20%,rgba(184,105,58,0.35),transparent_60%)]" />
       <p className="eyebrow relative flex justify-between text-ivory/60">
         <span>A feature screenplay</span>
-        <span>≈ 136 pages</span>
+        <span>{pentayya.pages}</span>
       </p>
       <div className="relative">
         <p className="font-telugu text-[4.2rem] leading-none text-ivory sm:text-[7rem] lg:text-[8.5rem]">{pentayya.titleTelugu}</p>
@@ -69,9 +69,9 @@ const tfiHref = tfi.watchUrl || contact.youtubeUrl
 const rows: Row[] = [
   {
     number: pentayya.number,
-    type: `${pentayya.type} · Primary project`,
+    type: `${pentayya.type} · ${pentayya.genre}`,
     title: pentayya.title,
-    credits: [pentayya.role],
+    credits: pentayya.roles,
     status: pentayya.status,
     href: projectHref(pentayya.slug),
     ctas: [

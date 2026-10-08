@@ -6,7 +6,7 @@ const year = new Date().getFullYear()
 
 export function Footer() {
   return (
-    <footer className="border-t border-ivory/10 bg-ink py-8 text-ivory/45">
+    <footer className="print:hidden border-t border-ivory/10 bg-ink py-8 text-ivory/45">
       <Container className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <p className="eyebrow !text-[0.6rem]">
           © {year} {person.fullName} · {person.roleShort}

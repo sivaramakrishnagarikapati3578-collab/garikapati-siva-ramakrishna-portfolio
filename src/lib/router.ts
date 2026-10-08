@@ -5,13 +5,15 @@ import { useEffect, useState } from 'react'
  *   #/            → home
  *   #/about       → home, scrolled to the "about" section
  *   #/work/myself → project page
+ *   #/profile     → one-page filmmaker profile (A4 one-sheet)
  */
-export type Route = { page: 'home'; section: string | null } | { page: 'project'; slug: string }
+export type Route = { page: 'home'; section: string | null } | { page: 'project'; slug: string } | { page: 'profile' }
 
 export function parseHash(hash: string): Route {
   const path = hash.replace(/^#\/?/, '')
   const project = path.match(/^work\/([\w-]+)/)
   if (project) return { page: 'project', slug: project[1] }
+  if (path === 'profile') return { page: 'profile' }
   return { page: 'home', section: path || null }
 }
 
@@ -27,6 +29,7 @@ export function useRoute() {
 
 export const sectionHref = (id: string) => `#/${id}`
 export const projectHref = (slug: string) => `#/work/${slug}`
+export const profileHref = '#/profile'
 
 export function scrollToSection(id: string, smooth = true) {
   if (!id) return window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' })

@@ -25,7 +25,7 @@ export function PentayyaPage() {
             <Arrow className="rotate-180" /> All work
           </SectionLink>
           <p className="rise eyebrow mt-12 flex flex-wrap items-center gap-4 text-ivory/60" style={delay(150)}>
-            <span className="text-clay">Project {pentayya.number}</span> {pentayya.type} · Written by Garikapati Siva Ramakrishna
+            <span className="text-clay">Project {pentayya.number}</span> {pentayya.type} · {pentayya.genre} · {pentayya.roles.join(' | ')}
           </p>
           <h1 className="rise display mt-6 text-[5rem] sm:text-[10rem] lg:text-[14rem]" style={delay(300)}>
             {pentayya.title}
@@ -51,7 +51,7 @@ export function PentayyaPage() {
           <div className="lg:col-span-5">
             <SectionLabel className="text-stone">The film</SectionLabel>
             <p data-reveal style={delay(100)} className="display mt-8 text-[2.3rem] leading-[1.08] sm:text-5xl">
-              A Telugu drama — rural and emotional — set in Pedhapuram, in the Palnadu region of Andhra Pradesh.
+              A Telugu rural action drama set in Pedhapuram, in the Palnadu region of Andhra Pradesh.
             </p>
           </div>
           <dl data-reveal style={delay(150)} className="border-t border-ink/15 lg:col-span-6 lg:col-start-7">

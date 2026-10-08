@@ -1,8 +1,10 @@
 import { Picture } from '../components/Picture'
 import { Arrow, Container, SectionLabel } from '../components/ui'
 import { delay } from '../lib/motion'
+import { profile } from '../content/profile'
 import { contact, person, photos, tfi } from '../content/site'
 import { asks } from '../lib/links'
+import { profileHref } from '../lib/router'
 
 export function Contact() {
   const details: [string, string, string][] = [
@@ -35,6 +37,14 @@ export function Contact() {
                 Watch my work
               </a>
             </div>
+            <p data-reveal style={delay(260)} className="eyebrow mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-ivory/60">
+              <a href={profile.pdf.href} download={profile.pdf.fileName} className="inline-flex items-center gap-3 text-ivory transition-colors hover:text-clay">
+                Download filmmaker profile <Arrow className="rotate-90" />
+              </a>
+              <a href={profileHref} className="link-line pb-0.5 transition-colors hover:text-ivory">
+                View one-page profile
+              </a>
+            </p>
           </div>
           <div data-reveal="image" style={delay(200)} className="relative aspect-[4/5] max-h-[78svh] overflow-hidden sm:aspect-[16/11] lg:col-span-4 lg:aspect-[4/5]">
             <Picture photo={photos.contact} sizes="(min-width:1024px) 30vw, 100vw" />

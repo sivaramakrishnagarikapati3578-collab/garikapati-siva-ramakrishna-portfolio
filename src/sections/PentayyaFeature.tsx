@@ -29,7 +29,7 @@ export function PentayyaFeature() {
               {pentayya.titleTelugu}
             </p>
             <p data-reveal style={delay(260)} className="mt-10 max-w-xl font-display text-2xl leading-snug text-ivory/90 sm:text-[2rem]">
-              A Telugu feature set in Pedhapuram, in the Palnadu region of Andhra Pradesh — centred on a 29-year-old agricultural labourer.
+              {pentayya.logline}
             </p>
             <p data-reveal style={delay(320)} className="eyebrow mt-8 text-clay">
               {pentayya.status}
