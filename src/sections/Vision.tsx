@@ -14,7 +14,7 @@ export function Vision() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/40 lg:bg-gradient-to-r lg:from-ink/95 lg:via-ink/50 lg:to-transparent" />
         <Container className="relative flex h-full flex-col justify-end pb-14 lg:justify-center lg:pb-0">
-          <SectionLabel index="07" className="text-ivory/60">
+          <SectionLabel index="08" className="text-ivory/60">
             Director’s Vision
           </SectionLabel>
           <blockquote data-reveal style={delay(150)} className="display mt-8 max-w-[15ch] text-[2.5rem] leading-[1.02] sm:text-6xl lg:max-w-[16ch] lg:text-[5rem]">

@@ -21,6 +21,8 @@ npm run preview    # serve the production build
 | Hero / About / Vision / Contact photos | `photos` (`position` controls the crop) |
 | Bio, filmmaker statement, job & education | `about`, `vision`, `filmmaker` |
 | Filmography list | `filmography` |
+| Acting showreel, acting photos | `acting.reelUrl`, `acting.photos` (hidden until filled) |
+| Craft / Telugu dialogue text | `craft`, `acting`, `dialogue` |
 | TFI watch link | `tfi.watchUrl` (and optional `tfi.image` thumbnail) |
 | MYSELF trailer / full film | `myself.trailerUrl`, `myself.filmUrl` (YouTube or Vimeo links embed automatically) |
 | MYSELF poster, director's note | `myself.materials` |

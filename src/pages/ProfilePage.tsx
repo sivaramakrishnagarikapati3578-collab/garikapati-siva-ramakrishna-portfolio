@@ -98,6 +98,17 @@ function ProfileWeb() {
       <section className="bg-paper py-16 sm:py-20">
         <Container className="grid gap-12 sm:grid-cols-2">
           <div data-reveal className="sm:col-span-2">
+            <Label>Craft</Label>
+            <div className="mt-6 grid gap-x-8 gap-y-8 sm:grid-cols-2">
+              {p.craft.map((c) => (
+                <div key={c.title} className="border-t border-ink/15 pt-4">
+                  <h3 className="font-display text-[1.7rem] leading-tight">{c.title}</h3>
+                  <p className="mt-3 leading-relaxed text-ink/75">{c.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div data-reveal className="sm:col-span-2">
             <Label>Writing</Label>
             <dl className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2">
               {p.writing.map(([t, d]) => (

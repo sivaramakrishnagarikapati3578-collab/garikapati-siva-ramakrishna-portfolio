@@ -7,7 +7,7 @@ export function Filmmaker() {
     <section id="filmmaker" className="bg-paper py-24 sm:py-32 lg:py-44">
       <Container className="grid gap-16 lg:grid-cols-12 lg:gap-10">
         <div className="lg:col-span-7">
-          <SectionLabel index="09" className="text-stone">
+          <SectionLabel index="10" className="text-stone">
             About the Filmmaker
           </SectionLabel>
           <h2 data-reveal style={delay(100)} className="display mt-8 text-6xl sm:text-7xl">

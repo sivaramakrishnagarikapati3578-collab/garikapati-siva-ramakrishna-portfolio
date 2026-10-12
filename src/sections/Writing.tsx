@@ -35,7 +35,7 @@ export function Writing() {
               On the page
             </h2>
             <p data-reveal style={delay(200)} className="mt-8 max-w-sm leading-relaxed text-ink/75">
-              Everything starts with the screenplay. Two feature screenplays are complete, and the next one is being written.
+              Everything starts with the screenplay — written in Telugu, with dialogue shaped for how each character speaks. Two feature screenplays are complete, and the next one is being written.
             </p>
 
             <div data-reveal style={delay(300)} className="mt-12 border-t border-ink/15 pt-6">

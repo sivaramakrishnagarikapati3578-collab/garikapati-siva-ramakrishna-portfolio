@@ -61,7 +61,7 @@
 }
 .sheet-portrait {
   position: relative;
-  height: 142mm;
+  height: 121mm;
   overflow: hidden;
 }
 .sheet-portrait img {
@@ -82,8 +82,8 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 6.5mm;
-  padding: 5mm 9mm 11mm;
+  gap: 5.5mm;
+  padding: 4mm 9mm 10mm;
 }
 .sheet-side .sheet-label {
   color: #b8693a;
@@ -112,7 +112,7 @@
 }
 .sheet-contact {
   margin-top: auto;
-  padding-top: 4.5mm;
+  padding-top: 4mm;
   border-top: 0.2mm solid rgba(239, 232, 220, 0.2);
 }
 .sheet-contact-name {
@@ -203,7 +203,7 @@
 }
 
 .sheet-bio {
-  margin-top: 7.5mm;
+  margin-top: 6.5mm;
   display: grid;
   gap: 3mm;
   font-size: 8.7pt;
@@ -218,9 +218,9 @@
 }
 
 .sheet-work {
-  margin-top: 7.5mm;
+  margin-top: 6.5mm;
   display: grid;
-  gap: 5mm;
+  gap: 4.4mm;
 }
 .sheet-work-item {
   display: grid;
@@ -277,6 +277,50 @@
   color: var(--sheet-ink);
 }
 
+.sheet-craft {
+  margin-top: 6.5mm;
+  padding-bottom: 5mm;
+}
+.sheet-craft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6mm;
+  margin-top: 3mm;
+}
+.sheet-craft h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 12pt;
+  line-height: 1.1;
+}
+.sheet-craft p {
+  margin-top: 1.5mm;
+  font-size: 7.4pt;
+  line-height: 1.5;
+  color: #3a332b;
+}
+.sheet-side-writing dl {
+  display: grid;
+  row-gap: 1.3mm;
+}
+.sheet-side-writing dl > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 3mm;
+}
+.sheet-side-writing dt {
+  font-family: var(--font-display);
+  font-size: 9.6pt;
+  line-height: 1.2;
+}
+.sheet-side-writing dd {
+  font-size: 5.4pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: rgba(239, 232, 220, 0.55);
+}
 .sheet-writing {
   margin-top: 7.5mm;
   padding-bottom: 6mm;

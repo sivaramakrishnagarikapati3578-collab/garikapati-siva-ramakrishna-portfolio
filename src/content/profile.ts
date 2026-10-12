@@ -4,8 +4,8 @@
  *
  *  After editing anything here, regenerate the PDF:   npm run profile:pdf
  *
- *  Photo: when the professional shoot is ready, put the file in
- *  /public/images/portrait/ and change `portrait.src` (and `position`).
+ *  Photo: when the professional shoot is ready, replace
+ *  /public/images/profile/portrait.jpg and run `npm run profile:pdf`.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 import { contact, myself, pentayya, person, tfi } from './site'
@@ -14,9 +14,11 @@ export const profile = {
   name: { first: 'Garikapati', last: 'Siva Ramakrishna' },
   roles: person.roles,
   positioning: person.positioning,
-  basedIn: person.basedIn,
 
-  /** Pre-cropped JPEG (JPEG keeps the PDF small). Web version uses the full photo. */
+  /**
+   * Pre-cropped JPEG (JPEG keeps the PDF small). Web version uses the full photo.
+   * New photo: replace public/images/profile/portrait.jpg, then run `npm run profile:pdf`.
+   */
   portrait: {
     src: '/images/profile/portrait.jpg',
     webSrc: '/images/portrait/hero-full.webp',
@@ -27,8 +29,20 @@ export const profile = {
   },
 
   bio: [
-    'Garikapati Siva Ramakrishna is a Telugu writer, director and actor from Andhra Pradesh, based in Hyderabad. His work is drawn to ordinary people, unfamiliar realities and raw emotion — character-driven stories in which feeling comes before spectacle.',
-    'He has written and directed two independent short films: TFI – Telugodi Fan Ism (2025), in which he also acted, and MYSELF – Brain vs Heart (2026), now in production, where he is also handling cinematography and editing. He has completed two feature screenplays, the rural action drama Pentayya and Kanna Prema, is now writing his next, and is involved as a writer on an upcoming film and web series.',
+    'Garikapati Siva Ramakrishna is a Telugu writer, director and actor from Guntur, Andhra Pradesh. His work is drawn to ordinary people, lesser-seen realities and raw emotion — character-driven stories in which feeling comes before spectacle.',
+    'He approaches a story from three sides: developing it as a writer, shaping it as a director and understanding its characters as an actor, with close attention to how they speak in Telugu. He has written and directed two independent short films — TFI – Telugodi Fan Ism (2025), in which he also acted, and MYSELF – Brain vs Heart (2026), now in production, where he also handles cinematography and editing — and has completed two feature screenplays, Pentayya and Kanna Prema.',
+  ],
+
+  /** Acting and Telugu dialogue — the two named strengths on the sheet. */
+  craft: [
+    {
+      title: 'Acting & Character',
+      text: 'He reads a character through intention, emotion and reaction as much as through the lines, and brings that to performance, expression and dialogue delivery. Acting credit: TFI – Telugodi Fan Ism (2025).',
+    },
+    {
+      title: 'Telugu Dialogue & Language',
+      text: 'A strong command of Telugu grammar underpins his writing. His dialogue is grammatically sound yet conversational — shaped by each character’s background, emotion and situation, with attention to rhythm, pauses and subtext.',
+    },
   ],
 
   work: [
@@ -66,9 +80,9 @@ export const profile = {
   ],
 
   writing: [
-    ['Pentayya', 'Feature Screenplay — Completed'],
-    ['Kanna Prema', 'Feature Screenplay — Completed'],
-    ['Untitled Project', 'Feature Screenplay — Currently Writing'],
+    ['Pentayya', 'Screenplay · Completed'],
+    ['Kanna Prema', 'Screenplay · Completed'],
+    ['Untitled Project', 'Currently writing'],
     ['Upcoming Film & Web Series', 'Writer'],
   ] as [string, string][],
 
@@ -77,7 +91,7 @@ export const profile = {
   quote: 'The emotion of a character should always feel real before it feels dramatic.',
 
   /** Openness to work — not past credits. */
-  availableFor: ['Feature Films', 'Short Films', 'Web Series', 'Writing', 'Direction', 'Acting', 'Assistant Direction / Assistant Writing'],
+  availableFor: ['Feature Films', 'Short Films', 'Web Series', 'Writing', 'Dialogue Writing', 'Direction', 'Acting', 'Assistant Direction / Assistant Writing'],
 
   contact: {
     phoneDisplay: contact.phoneDisplay,

@@ -46,7 +46,6 @@ export const person = {
   roles: ['Writer', 'Director', 'Actor'],
   roleShort: 'Writer | Director | Actor',
   positioning: ['Filmmaker', 'Screenwriter', 'Performer'],
-  basedIn: 'Hyderabad, India',
   from: 'Guntur, Andhra Pradesh',
   language: 'Telugu',
   supportingLine: 'Telling stories rooted in human emotion, real lives and distinctive perspectives.',
@@ -101,13 +100,13 @@ export const photos = {
 export const about = {
   heading: 'A Telugu writer, director and actor, drawn to the lives that rarely reach the screen.',
   intro: [
-    'Garikapati Siva Ramakrishna is a Telugu writer, director and actor from Guntur, Andhra Pradesh, currently based in Hyderabad. His interest in cinema began in childhood and grew into a serious pursuit during his college years.',
-    'He has written and directed two independent short films and has completed feature screenplays including Pentayya and Kanna Prema. His writing is drawn toward real people, lesser-known realities, different ways of life and the emotional conflicts that sit beneath everyday experience.',
-    'As a filmmaker, he wants to tell stories with a raw, authentic quality that still connect with audiences through simple, universal human emotions.',
+    'Garikapati Siva Ramakrishna is a Telugu writer, director and actor from Guntur, Andhra Pradesh. He is drawn to ordinary people, lesser-seen realities and the emotional conflicts beneath everyday life — character-driven stories, told in Telugu.',
+    'He comes to a story from more than one side. He develops it as a writer, shapes it as a director, and understands its characters as an actor — through what they want, what they feel and how they react. Language is central to that work: with a strong command of Telugu grammar, he pays close attention to how each character speaks, and writes dialogue that sounds spoken rather than recited.',
+    'He has written and directed two independent short films, acting in the first, and has completed two feature screenplays, Pentayya and Kanna Prema.',
   ],
   facts: [
-    ['Based in', 'Hyderabad'],
     ['From', 'Guntur, Andhra Pradesh'],
+    ['Roles', 'Writer | Director | Actor'],
     ['Language', 'Telugu'],
     ['Work', '2 short films · 2 feature screenplays'],
   ] as [string, string][],
@@ -121,6 +120,7 @@ export const vision = {
     'I believe every person carries a story, and every story can be told in many different ways.',
     'I am interested in people — their choices, relationships, struggles, contradictions and the emotions they often keep hidden. I want to explore realities and ways of life that are not always seen on screen, and bring them into stories that feel honest and emotionally grounded.',
     'For me, the emotion of a character should always feel real before it feels dramatic. I want my films to keep a raw quality while still being engaging and visually expressive.',
+    'Because I also act, I think about a scene from inside it — what a character wants, what they hide, and how the words sit when they are spoken. In Telugu especially, how a line is said carries as much as the line itself.',
     'My goal is to keep discovering new ways of telling stories, and to build a body of Telugu cinema that connects with people through genuine human emotion.',
   ],
 }
@@ -250,12 +250,56 @@ export const writing = {
 /* ── FILMMAKING ──────────────────────────────────────────────────────────── */
 
 export const disciplines = [
-  { title: 'Story & Screenwriting', items: ['Story development', 'Screenplay writing', 'Dialogue writing', 'Character development'] },
+  { title: 'Story & Screenwriting', items: ['Story development', 'Screenplay writing', 'Telugu dialogue writing', 'Character development'] },
   { title: 'Direction', items: ['Scene blocking', 'Performance direction', 'Shot planning', 'Visual storytelling'] },
   { title: 'Cinematography', items: ['Composition', 'Framing', 'Camera operation', 'Camera movement', 'Visual mood'] },
   { title: 'Editing', items: ['Narrative editing', 'Pacing', 'Performance editing', 'Visual continuity'] },
   { title: 'Production', items: ['Basic production planning', 'Locations', 'Lighting', 'Sound coordination'] },
+  { title: 'Acting & Performance', items: ['Character interpretation', 'Expression', 'Dialogue delivery', 'Emotional truth'] },
 ]
+
+/* ── CRAFT — writer · director · actor, and Telugu dialogue ──────────────── */
+
+export const craft = {
+  heading: 'Writer. Director. Actor.',
+  intro:
+    'Three ways into the same character. He develops a story and its people on the page, translates them into performance and image as a director, and — as an actor — works from inside the character.',
+  disciplines: [
+    ['As a writer', 'Develops stories, characters and dialogue — in Telugu, written for the way people actually speak.'],
+    ['As a director', 'Translates the script into performances and cinematic storytelling, from blocking to the cut.'],
+    ['As an actor', 'Engages with a character’s intentions, emotions, reactions and spoken words.'],
+  ] as [string, string][],
+}
+
+export const acting = {
+  heading: 'Acting & Character',
+  idea: 'I understand a character not only through the words written for them, but through the emotions, intentions and reactions that bring those words to life.',
+  text: 'Acting is part of how he writes and directs. Performing gives him a working sense of what an actor needs from a scene — and of how a line, a pause or a look changes what the audience feels.',
+  focus: ['Character interpretation', 'Expression', 'Dialogue delivery', 'Emotional truth'],
+  /** Verified acting credits only. */
+  credits: [{ title: 'TFI – Telugodi Fan Ism', year: '2025', credit: 'Writer | Director | Actor' }],
+  /**
+   * Add later — nothing is shown until these are filled:
+   *   reelUrl: a YouTube / Vimeo link to the acting showreel
+   *   photos:  acting stills, e.g. { src: '/images/acting/still-01.webp', alt: '…' }
+   */
+  reelUrl: '',
+  photos: [] as Photo[],
+}
+
+export const dialogue = {
+  heading: 'Telugu Dialogue & Language Craft',
+  headingTelugu: 'సంభాషణ',
+  text: 'A strong command of Telugu grammar (vyakaranam) sits at the centre of his writing. He writes Telugu that is grammatically sound yet sounds spoken — shaped by who a character is, where they come from, what they feel and the situation they are in.',
+  focus: [
+    'Grammatically sound Telugu',
+    'Natural, conversational dialogue',
+    'Character-specific vocabulary and speech',
+    'Emotion carried through dialogue',
+    'Rhythm, pauses and subtext',
+    'The difference between written and spoken Telugu',
+  ],
+}
 
 /* ── FILMOGRAPHY ─────────────────────────────────────────────────────────── */
 
@@ -269,8 +313,8 @@ export const filmography = [
 export const filmmaker = {
   bio: [
     'Cinema has been part of Siva’s life since childhood in Guntur. In his third year of college it became a serious pursuit — from then on he worked toward becoming a director, learning by writing and by making.',
-    'His first independent short film, TFI – Telugodi Fan Ism, was released in 2025; he wrote, directed and acted in it. His second, MYSELF – Brain vs Heart, is currently being shot — he wrote and directed it and is also handling its cinematography and editing.',
-    'Alongside the short films he has written two complete feature screenplays, Pentayya and Kanna Prema. He is now writing his next screenplay and is involved as a writer on an upcoming film and a web series.',
+    'His first independent short film, TFI – Telugodi Fan Ism, was released in 2025; he wrote, directed and acted in it, working on both sides of the camera. His second, MYSELF – Brain vs Heart, is currently being shot — he wrote and directed it and is also handling its cinematography and editing.',
+    'Alongside the short films he has written two complete feature screenplays, Pentayya and Kanna Prema. He is now writing his next screenplay and is involved as a writer on an upcoming film and a web series. Telugu is the language of all his work, and he is particular about it — its grammar, and the way a line sounds when it is spoken.',
     'He studied Computer Science & Engineering and has worked as an R&D Engineer since 2025. He is now completing his notice period there as he moves from his software career toward filmmaking.',
   ],
   journey: [
@@ -278,7 +322,7 @@ export const filmmaker = {
     ['College, 3rd year', 'Begins working seriously toward becoming a director.'],
     ['2025', 'TFI – Telugodi Fan Ism — first released short film.'],
     ['2026', 'MYSELF – Brain vs Heart — in production.'],
-    ['Now', 'Hyderabad — writing the next screenplay; writer on an upcoming film and web series.'],
+    ['Now', 'Writing the next screenplay; writer on an upcoming film and web series.'],
   ] as [string, string][],
   education: [
     { degree: 'B.Tech — Computer Science & Engineering', place: 'Amrita Vishwa Vidyapeetham, Kerala', years: '2021–2025', score: '7.25 CGPA' },

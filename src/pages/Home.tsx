@@ -5,6 +5,7 @@ import { PentayyaFeature } from '../sections/PentayyaFeature'
 import { MyselfFeature } from '../sections/MyselfFeature'
 import { Filmography } from '../sections/Filmography'
 import { Writing } from '../sections/Writing'
+import { Craft } from '../sections/Craft'
 import { Vision } from '../sections/Vision'
 import { Filmmaking } from '../sections/Filmmaking'
 import { Filmmaker } from '../sections/Filmmaker'
@@ -20,6 +21,7 @@ export function Home() {
       <MyselfFeature />
       <Filmography />
       <Writing />
+      <Craft />
       <Vision />
       <Filmmaking />
       <Filmmaker />

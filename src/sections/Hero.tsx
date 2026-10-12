@@ -20,7 +20,7 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-[1440px] -mt-32 flex-1 flex-col px-5 pb-12 sm:-mt-40 sm:px-8 lg:mt-0 lg:justify-center lg:px-14 lg:pt-28 lg:pb-28">
         <div className="max-w-[44rem]">
           <p className="rise eyebrow mb-5 text-clay sm:mb-6" style={delay(900)}>
-            Telugu Cinema — {person.basedIn}
+            Telugu Cinema
           </p>
           <h1 className="display">
             <span className="rise block text-[2.1rem] text-ivory/75 italic sm:text-5xl lg:text-[3.4rem]" style={delay(1100)}>
@@ -42,6 +42,9 @@ export function Hero() {
                 {r}
               </span>
             ))}
+          </p>
+          <p className="rise mt-3 font-display text-xl text-ivory/60 sm:text-2xl" style={delay(1620)}>
+            {person.positioning.join(' • ')}
           </p>
           <p className="rise mt-5 max-w-[30rem] text-[1.02rem] leading-relaxed text-ivory/70 sm:text-lg" style={delay(1700)}>
             {person.supportingLine}

@@ -57,6 +57,18 @@ export function ProfileSheet() {
             <Items items={p.availableFor} />
           </section>
 
+          <section className="sheet-side-writing">
+            <h3 className="sheet-label">Writing</h3>
+            <dl>
+              {p.writing.map(([t, d]) => (
+                <div key={t}>
+                  <dt>{t}</dt>
+                  <dd>{d}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
           <section className="sheet-contact">
             <h3 className="sheet-label">Contact</h3>
             <p className="sheet-contact-name">{`${p.name.first} ${p.name.last}`}</p>
@@ -84,7 +96,7 @@ export function ProfileSheet() {
         <header className="sheet-head">
           <p className="sheet-kicker">
             <span>Filmmaker Profile</span>
-            <span>Telugu Cinema · {p.basedIn}</span>
+            <span>Telugu Cinema</span>
           </p>
           <h1 className="sheet-name">
             <span>{p.name.first}</span>
@@ -124,16 +136,16 @@ export function ProfileSheet() {
           ))}
         </section>
 
-        <section className="sheet-writing">
-          <h2 className="sheet-label sheet-label-rule">Writing</h2>
-          <dl>
-            {p.writing.map(([t, d]) => (
-              <div key={t}>
-                <dt>{t}</dt>
-                <dd>{d}</dd>
+        <section className="sheet-craft">
+          <h2 className="sheet-label sheet-label-rule">Craft</h2>
+          <div className="sheet-craft-grid">
+            {p.craft.map((c) => (
+              <div key={c.title}>
+                <h3>{c.title}</h3>
+                <p>{c.text}</p>
               </div>
             ))}
-          </dl>
+          </div>
         </section>
 
         <footer className="sheet-foot">

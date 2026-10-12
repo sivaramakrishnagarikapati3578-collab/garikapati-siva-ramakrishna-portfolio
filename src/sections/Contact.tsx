@@ -19,7 +19,7 @@ export function Contact() {
       <Container className="relative">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8">
-            <SectionLabel index="10" className="text-ivory/50">
+            <SectionLabel index="11" className="text-ivory/50">
               Contact
             </SectionLabel>
             <h2 data-reveal style={delay(100)} className="display mt-10 max-w-[13ch] text-[3.3rem] sm:text-[6.5rem] lg:text-[7.6rem]">
@@ -56,7 +56,7 @@ export function Contact() {
           <div data-reveal className="lg:col-span-4">
             <p className="display text-3xl">{person.fullName}</p>
             <p className="eyebrow mt-4 text-ivory/55">{person.roleShort}</p>
-            <p className="mt-2 text-sm text-ivory/55">{person.basedIn}</p>
+            <p className="mt-2 text-sm text-ivory/55">From {person.from}</p>
           </div>
           <dl className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-8">
             {details.map(([k, v, href], i) => (

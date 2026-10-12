@@ -108,7 +108,7 @@ export function Nav() {
           ))}
         </nav>
         <p className="eyebrow border-t border-ivory/10 px-6 py-6 text-ivory/50 sm:px-10">
-          {person.fullName} — {person.basedIn}
+          {person.fullName} — {person.roleShort}
         </p>
       </div>
     </>

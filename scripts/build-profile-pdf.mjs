@@ -51,7 +51,7 @@ const chrome = spawn(findChrome(), ['--headless=new', '--disable-gpu', `--remote
 
 try {
   let target
-  for (let i = 0; i < 75 && !target; i++) {
+  for (let i = 0; i < 150 && !target; i++) {
     await sleep(200)
     try {
       target = (await (await fetch(`http://127.0.0.1:${port}/json`)).json()).find((t) => t.type === 'page')

@@ -14,7 +14,7 @@ export function About() {
           <div data-reveal="image" className="relative aspect-[4/5] overflow-hidden bg-paper">
             <Picture photo={photos.about} sizes="(min-width:1024px) 40vw, 100vw" />
           </div>
-          <p className="eyebrow mt-4 text-stone">Guntur → Hyderabad</p>
+          <p className="eyebrow mt-4 text-stone">Guntur, Andhra Pradesh</p>
         </div>
 
         <div className="flex flex-col justify-center lg:col-span-6 lg:col-start-7">
@@ -49,6 +49,9 @@ export function About() {
           </blockquote>
 
           <p data-reveal style={delay(450)} className="eyebrow mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-stone">
+            <SectionLink id="craft" className="inline-flex items-center gap-3 transition-colors hover:text-ink">
+              Acting & dialogue <Arrow />
+            </SectionLink>
             <a href={profileHref} className="inline-flex items-center gap-3 transition-colors hover:text-ink">
               Filmmaker profile <Arrow />
             </a>
