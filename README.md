@@ -78,5 +78,7 @@ After editing the profile, regenerate the PDF (needs Chrome/Chromium installed l
 npm run profile:pdf
 ```
 
-New professional photo: export a portrait-orientation JPEG (≈ 0.52 width/height, e.g. 1040×2000)
-to `public/images/profile/portrait.jpg`, adjust `portrait.position` / `webSrc` in `profile.ts`, then run `npm run profile:pdf`.
+Personal photos: originals live in `public/images/siva/`; the web-ready copies used by the site are in
+`public/images/siva/web/` (About, Vision, Contact, Profile). To change the one-sheet portrait, replace
+`public/images/siva/web/profile-sheet.jpg` (portrait JPEG, ≈ 0.61 width/height, ~700 px wide), adjust
+`portrait.position` in `profile.ts` if needed, then run `npm run profile:pdf`.

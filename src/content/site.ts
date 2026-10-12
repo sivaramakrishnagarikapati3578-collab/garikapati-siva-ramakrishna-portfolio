@@ -77,21 +77,22 @@ export const photos = {
     positionMobile: '50% 20%',
   },
   about: {
-    src: '/images/portrait/seated-full.webp',
-    srcSmall: '/images/portrait/seated-800.webp',
-    alt: 'Garikapati Siva Ramakrishna, seated in a garden',
-    position: '62% 34%',
+    src: '/images/siva/web/about-full.webp',
+    srcSmall: '/images/siva/web/about-800.webp',
+    alt: 'Garikapati Siva Ramakrishna, close portrait looking at the camera',
+    position: '45% 35%',
   },
   vision: {
-    src: '/images/portrait/contemplative-full.webp',
-    srcSmall: '/images/portrait/contemplative-800.webp',
-    alt: 'Garikapati Siva Ramakrishna, looking away in thought',
-    position: '78% 40%',
+    src: '/images/siva/web/vision-full.webp',
+    srcSmall: '/images/siva/web/vision-800.webp',
+    alt: 'Garikapati Siva Ramakrishna at a hilltop fort, looking out over the city',
+    position: '70% 30%',
   },
   contact: {
-    src: '/images/portrait/standing-crop.webp',
-    alt: 'Garikapati Siva Ramakrishna, facing the camera',
-    position: '50% 0%',
+    src: '/images/siva/web/contact-full.webp',
+    srcSmall: '/images/siva/web/contact-800.webp',
+    alt: 'Garikapati Siva Ramakrishna behind a camera on a tripod at sunset',
+    position: '50% 32%',
   },
 } satisfies Record<string, Photo>
 

@@ -4,8 +4,8 @@
  *
  *  After editing anything here, regenerate the PDF:   npm run profile:pdf
  *
- *  Photo: when the professional shoot is ready, replace
- *  /public/images/profile/portrait.jpg and run `npm run profile:pdf`.
+ *  Photo: replace /public/images/siva/web/profile-sheet.jpg (PDF) and
+ *  profile-full.webp (web page), then run `npm run profile:pdf`.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 import { contact, myself, pentayya, person, tfi } from './site'
@@ -17,15 +17,15 @@ export const profile = {
 
   /**
    * Pre-cropped JPEG (JPEG keeps the PDF small). Web version uses the full photo.
-   * New photo: replace public/images/profile/portrait.jpg, then run `npm run profile:pdf`.
+   * New photo: replace public/images/siva/web/profile-sheet.jpg, then run `npm run profile:pdf`.
    */
   portrait: {
-    src: '/images/profile/portrait.jpg',
-    webSrc: '/images/portrait/hero-full.webp',
-    alt: 'Garikapati Siva Ramakrishna',
-    /** object-position for the crop — keeps the face and tower in frame. */
-    position: '50% 30%',
-    webPosition: '62% 30%',
+    src: '/images/siva/web/profile-sheet.jpg',
+    webSrc: '/images/siva/web/profile-full.webp',
+    alt: 'Garikapati Siva Ramakrishna in a black suit',
+    /** object-position for the crop — keeps the face in frame. */
+    position: '50% 0%',
+    webPosition: '50% 12%',
   },
 
   bio: [
