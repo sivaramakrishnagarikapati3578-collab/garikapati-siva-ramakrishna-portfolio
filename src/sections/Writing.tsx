@@ -39,8 +39,9 @@ export function Writing() {
             </p>
 
             <div data-reveal style={delay(300)} className="mt-12 border-t border-ink/15 pt-6">
-              <p className="eyebrow text-stone">{writing.other.role}</p>
-              <p className="mt-3 font-display text-3xl leading-snug">{writing.other.what}</p>
+              <p className="eyebrow text-stone">{writing.current.heading}</p>
+              <p className="mt-3 font-display text-2xl leading-snug">{writing.current.text}</p>
+              <p className="mt-3 text-sm leading-relaxed text-stone">{writing.current.note}</p>
             </div>
           </div>
 

@@ -57,6 +57,18 @@ export function ProfileSheet() {
             <Items items={p.availableFor} />
           </section>
 
+          {p.availability.shown && (
+            <section className="sheet-availability">
+              <h3 className="sheet-label">Availability</h3>
+              {p.availability.lines.map(([what, when]) => (
+                <p key={what}>
+                  <span>{what}:</span> {when}
+                </p>
+              ))}
+              <p className="sheet-availability-base">{p.availability.basedIn}</p>
+            </section>
+          )}
+
           <section className="sheet-side-writing">
             <h3 className="sheet-label">Writing</h3>
             <dl>
@@ -67,6 +79,7 @@ export function ProfileSheet() {
                 </div>
               ))}
             </dl>
+            <p className="sheet-side-note">{p.currentWriting}</p>
           </section>
 
           <section className="sheet-contact">

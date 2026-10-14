@@ -24,10 +24,27 @@ export function Vision() {
       </div>
 
       <Container className="grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:py-36">
-        <p data-reveal className="eyebrow text-clay lg:col-span-3">
-          Filmmaker’s statement
-        </p>
-        <div className="lg:col-span-7 lg:col-start-5">
+        <div className="lg:col-span-5">
+          <p data-reveal className="eyebrow text-clay">
+            Filmmaker’s statement
+          </p>
+          <div className="mt-8 grid grid-cols-[1.55fr_1fr] gap-2 sm:gap-3 lg:sticky lg:top-28">
+            <figure data-reveal="image" className="zoom relative row-span-2 aspect-[4/5] overflow-hidden bg-ink-3">
+              <Picture photo={photos.statement[0]} sizes="(min-width:1024px) 26vw, 58vw" />
+            </figure>
+            <figure data-reveal="image" style={delay(120)} className="zoom relative overflow-hidden bg-ink-3">
+              <Picture photo={photos.statement[1]} sizes="(min-width:1024px) 16vw, 38vw" />
+            </figure>
+            <figure data-reveal="image" style={delay(220)} className="zoom relative overflow-hidden bg-ink-3">
+              <Picture photo={photos.statement[2]} sizes="(min-width:1024px) 16vw, 38vw" />
+            </figure>
+            <p className="col-span-2 mt-3 flex items-center gap-3 border-t border-ivory/10 pt-4 text-[0.6rem] font-medium tracking-[0.24em] text-ivory/50 uppercase">
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-clay" />
+              {person.fullName} — Writer · Director · Actor
+            </p>
+          </div>
+        </div>
+        <div className="lg:col-span-6 lg:col-start-7">
           <p data-reveal className="font-display text-[1.9rem] leading-snug sm:text-[2.5rem]">
             {vision.statement[0]}
           </p>

@@ -21,6 +21,8 @@ npm run preview    # serve the production build
 | Hero / About / Vision / Contact photos | `photos` (`position` controls the crop) |
 | Bio, filmmaker statement, job & education | `about`, `vision`, `filmmaker` |
 | Filmography list | `filmography` |
+| Availability note (Contact, Profile, PDF) | `availability` — hides itself after `showUntil` (8 Dec 2026); then run `npm run profile:pdf` |
+| Current (confidential) writing work | `writing.current` |
 | Acting showreel, acting photos | `acting.reelUrl`, `acting.photos` (hidden until filled) |
 | Craft / Telugu dialogue text | `craft`, `acting`, `dialogue` |
 | TFI watch link | `tfi.watchUrl` (and optional `tfi.image` thumbnail) |

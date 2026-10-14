@@ -2,7 +2,7 @@ import { Picture } from '../components/Picture'
 import { Arrow, Container, SectionLabel } from '../components/ui'
 import { delay } from '../lib/motion'
 import { profile } from '../content/profile'
-import { contact, person, photos, tfi } from '../content/site'
+import { availability, contact, isAvailabilityShown, person, photos, tfi } from '../content/site'
 import { asks } from '../lib/links'
 import { profileHref } from '../lib/router'
 
@@ -57,6 +57,17 @@ export function Contact() {
             <p className="display text-3xl">{person.fullName}</p>
             <p className="eyebrow mt-4 text-ivory/55">{person.roleShort}</p>
             <p className="mt-2 text-sm text-ivory/55">From {person.from}</p>
+            {isAvailabilityShown() && (
+              <div className="mt-8 border-l border-ember pl-4">
+                <p className="eyebrow text-ivory/45">Availability</p>
+                {availability.lines.map(([what, when]) => (
+                  <p key={what} className="mt-2 text-sm leading-relaxed text-ivory/85">
+                    <span className="text-ivory/55">{what}:</span> {when}
+                  </p>
+                ))}
+                <p className="mt-2 text-xs text-ivory/50">{availability.basedIn}</p>
+              </div>
+            )}
           </div>
           <dl className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-8">
             {details.map(([k, v, href], i) => (

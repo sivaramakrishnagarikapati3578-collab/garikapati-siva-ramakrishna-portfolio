@@ -88,13 +88,34 @@ export const photos = {
     alt: 'Garikapati Siva Ramakrishna at a hilltop fort, looking out over the city',
     position: '70% 30%',
   },
+  /** Filmmaker's statement composition: one primary portrait + two supporting frames. */
+  statement: [
+    {
+      src: '/images/siva/web/statement-cafe-full.webp',
+      srcSmall: '/images/siva/web/statement-cafe-800.webp',
+      alt: 'Garikapati Siva Ramakrishna seated by the sea, looking into the distance',
+      position: '62% 30%',
+    },
+    {
+      src: '/images/siva/web/statement-sea-full.webp',
+      srcSmall: '/images/siva/web/statement-sea-800.webp',
+      alt: 'Garikapati Siva Ramakrishna on the shore, facing the waves',
+      position: '50% 55%',
+    },
+    {
+      src: '/images/siva/web/statement-rooftop-full.webp',
+      srcSmall: '/images/siva/web/statement-rooftop-800.webp',
+      alt: 'Garikapati Siva Ramakrishna in silhouette on a rooftop under a stormy sky',
+      position: '50% 45%',
+    },
+  ] as Photo[],
   contact: {
     src: '/images/siva/web/contact-full.webp',
     srcSmall: '/images/siva/web/contact-800.webp',
     alt: 'Garikapati Siva Ramakrishna behind a camera on a tripod at sunset',
     position: '50% 32%',
   },
-} satisfies Record<string, Photo>
+} satisfies Record<string, Photo | Photo[]>
 
 /* ── ABOUT ───────────────────────────────────────────────────────────────── */
 
@@ -245,7 +266,32 @@ export const writing = {
     { title: 'Kanna Prema', titleTelugu: 'కన్న ప్రేమ', kind: 'Feature screenplay', state: 'Completed' },
   ],
   developing: [{ title: 'Untitled Project', kind: 'Screenplay', state: 'Currently writing' }],
-  other: { role: 'Writer', what: 'Upcoming Film & Web Series' },
+  /** Confidential current engagement — no titles, companies or story details. */
+  current: {
+    heading: 'Current Writing Work',
+    text: 'Currently contributing to writing work for upcoming feature-film and web-series projects.',
+    note: 'Project titles and story details remain confidential.',
+  },
+}
+
+/* ── AVAILABILITY (temporary) ───────────────────────────────────────────────
+ *  Shown on Contact, the profile page and the profile PDF — only up to and
+ *  including `showUntil`. After that date it disappears from the website on its
+ *  own; run `npm run profile:pdf` to remove it from the PDF too.
+ *  To change it, edit the lines below. To remove it early, set showUntil: ''.
+ */
+export const availability = {
+  showUntil: '2026-12-08',
+  basedIn: 'Currently based in Bengaluru, Karnataka.',
+  lines: [
+    ['Remote writing collaboration', 'available now.'],
+    ['Hyderabad-based, on-location work', 'available from 8 December 2026.'],
+  ] as [string, string][],
+}
+
+export function isAvailabilityShown(now = new Date()) {
+  if (!availability.showUntil) return false
+  return now <= new Date(`${availability.showUntil}T23:59:59+05:30`)
 }
 
 /* ── FILMMAKING ──────────────────────────────────────────────────────────── */
@@ -315,7 +361,7 @@ export const filmmaker = {
   bio: [
     'Cinema has been part of Siva’s life since childhood in Guntur. In his third year of college it became a serious pursuit — from then on he worked toward becoming a director, learning by writing and by making.',
     'His first independent short film, TFI – Telugodi Fan Ism, was released in 2025; he wrote, directed and acted in it, working on both sides of the camera. His second, MYSELF – Brain vs Heart, is currently being shot — he wrote and directed it and is also handling its cinematography and editing.',
-    'Alongside the short films he has written two complete feature screenplays, Pentayya and Kanna Prema. He is now writing his next screenplay and is involved as a writer on an upcoming film and a web series. Telugu is the language of all his work, and he is particular about it — its grammar, and the way a line sounds when it is spoken.',
+    'Alongside the short films he has written two complete feature screenplays, Pentayya and Kanna Prema. He is now writing his next screenplay and is contributing to writing work for upcoming feature-film and web-series projects. Telugu is the language of all his work, and he is particular about it — its grammar, and the way a line sounds when it is spoken.',
     'He studied Computer Science & Engineering and has worked as an R&D Engineer since 2025. He is now completing his notice period there as he moves from his software career toward filmmaking.',
   ],
   journey: [
@@ -323,7 +369,7 @@ export const filmmaker = {
     ['College, 3rd year', 'Begins working seriously toward becoming a director.'],
     ['2025', 'TFI – Telugodi Fan Ism — first released short film.'],
     ['2026', 'MYSELF – Brain vs Heart — in production.'],
-    ['Now', 'Writing the next screenplay; writer on an upcoming film and web series.'],
+    ['Now', 'Writing the next screenplay; contributing to writing work for upcoming feature-film and web-series projects (confidential).'],
   ] as [string, string][],
   education: [
     { degree: 'B.Tech — Computer Science & Engineering', place: 'Amrita Vishwa Vidyapeetham, Kerala', years: '2021–2025', score: '7.25 CGPA' },

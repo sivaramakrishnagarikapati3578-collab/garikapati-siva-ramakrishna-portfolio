@@ -127,6 +127,20 @@ function ProfileWeb() {
             <Label>Available for</Label>
             <p className="mt-4 leading-relaxed text-ink/80">{p.availableFor.join(' · ')}</p>
           </div>
+          <div data-reveal className="sm:col-span-2">
+            <p className="text-sm leading-relaxed text-stone">{p.currentWriting}</p>
+          </div>
+          {p.availability.shown && (
+            <div data-reveal className="border-l border-ember pl-4 sm:col-span-2">
+              <Label>Availability</Label>
+              {p.availability.lines.map(([what, when]) => (
+                <p key={what} className="mt-3 leading-relaxed text-ink/85">
+                  <span className="text-stone">{what}:</span> {when}
+                </p>
+              ))}
+              <p className="mt-2 text-sm text-stone">{p.availability.basedIn}</p>
+            </div>
+          )}
         </Container>
       </section>
 

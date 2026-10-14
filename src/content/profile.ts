@@ -8,7 +8,7 @@
  *  profile-full.webp (web page), then run `npm run profile:pdf`.
  * ─────────────────────────────────────────────────────────────────────────────
  */
-import { contact, myself, pentayya, person, tfi } from './site'
+import { availability, contact, isAvailabilityShown, myself, pentayya, person, tfi, writing as siteWriting } from './site'
 
 export const profile = {
   name: { first: 'Garikapati', last: 'Siva Ramakrishna' },
@@ -83,8 +83,13 @@ export const profile = {
     ['Pentayya', 'Screenplay · Completed'],
     ['Kanna Prema', 'Screenplay · Completed'],
     ['Untitled Project', 'Currently writing'],
-    ['Upcoming Film & Web Series', 'Writer'],
+    ['Current Writing Work', 'Confidential'],
   ] as [string, string][],
+  /** Confidential current engagement (same wording as the website). */
+  currentWriting: `${siteWriting.current.text.replace('Currently contributing', 'Contributing')} ${siteWriting.current.note}`,
+
+  /** Temporary — read from site.ts; hidden automatically after availability.showUntil. */
+  availability: { shown: isAvailabilityShown(), ...availability },
 
   interests: ['Human Stories', 'Rural Worlds', 'Raw Emotion', 'Character-Driven Drama', 'Action', 'Telugu Cinema'],
 

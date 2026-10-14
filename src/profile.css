@@ -61,7 +61,7 @@
 }
 .sheet-portrait {
   position: relative;
-  height: 121mm;
+  height: 106mm;
   overflow: hidden;
 }
 .sheet-portrait img {
@@ -82,8 +82,8 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 5.5mm;
-  padding: 4mm 9mm 10mm;
+  gap: 4.2mm;
+  padding: 3mm 9mm 9mm;
 }
 .sheet-side .sheet-label {
   color: #b8693a;
@@ -92,7 +92,7 @@
 .sheet-quote blockquote {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 12.5pt;
+  font-size: 11.6pt;
   line-height: 1.22;
 }
 .sheet-quote figcaption {
@@ -103,8 +103,8 @@
   color: rgba(239, 232, 220, 0.5);
 }
 .sheet-list {
-  font-size: 7.6pt;
-  line-height: 1.65;
+  font-size: 7.2pt;
+  line-height: 1.6;
   color: rgba(239, 232, 220, 0.85);
 }
 .sheet-list span span {
@@ -112,7 +112,7 @@
 }
 .sheet-contact {
   margin-top: auto;
-  padding-top: 4mm;
+  padding-top: 3.5mm;
   border-top: 0.2mm solid rgba(239, 232, 220, 0.2);
 }
 .sheet-contact-name {
@@ -298,6 +298,25 @@
   font-size: 7.4pt;
   line-height: 1.5;
   color: #3a332b;
+}
+.sheet-availability p {
+  font-size: 7.2pt;
+  line-height: 1.5;
+  color: rgba(239, 232, 220, 0.88);
+}
+.sheet-availability span {
+  color: rgba(239, 232, 220, 0.55);
+}
+.sheet-availability-base {
+  margin-top: 0.8mm;
+  font-size: 6.4pt !important;
+  color: rgba(239, 232, 220, 0.55) !important;
+}
+.sheet-side-note {
+  margin-top: 1.6mm;
+  font-size: 6.4pt;
+  line-height: 1.45;
+  color: rgba(239, 232, 220, 0.6);
 }
 .sheet-side-writing dl {
   display: grid;
