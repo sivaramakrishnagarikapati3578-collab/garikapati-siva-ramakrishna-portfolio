@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { Picture } from '../components/Picture'
 import { Arrow, Container, Credit, SectionLabel, Status } from '../components/ui'
 import { delay } from '../lib/motion'
-import { contact, myself, pentayya, tfi } from '../content/site'
+import { contact, myself, pentayya, swargam, tfi } from '../content/site'
 import { asks } from '../lib/links'
 import { projectHref } from '../lib/router'
 
@@ -18,6 +18,7 @@ type Row = {
   ctas: Cta[]
   visual: ReactNode
   lead?: boolean
+  description?: string
 }
 
 /** Pentayya has no images yet — a typographic title card instead of a fake still. */
@@ -32,6 +33,30 @@ function PentayyaCard() {
       <div className="relative">
         <p className="font-telugu text-[4.2rem] leading-none text-ivory sm:text-[7rem] lg:text-[8.5rem]">{pentayya.titleTelugu}</p>
         <p className="eyebrow mt-5 text-ivory/60">{pentayya.setting}</p>
+      </div>
+    </div>
+  )
+}
+
+/** Software Swargam — typographic title card in the synopsis PDF's navy and amber. */
+function SwargamCard() {
+  return (
+    <div className="absolute inset-0 flex flex-col justify-between bg-[#121a2b] p-6 sm:p-10">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_10%,rgba(201,151,63,0.25),transparent_60%)]" />
+      <p className="eyebrow relative flex justify-between text-ivory/55">
+        <span>A feature film project</span>
+        <span>Hyderabad</span>
+      </p>
+      <div className="relative">
+        <p className="font-sans text-[2.6rem] leading-[0.9] font-semibold tracking-[-0.02em] text-ivory uppercase sm:text-6xl lg:text-7xl">
+          Software
+          <br />
+          Swargam
+        </p>
+        <p className="mt-4 flex items-center gap-3 text-[0.65rem] font-medium tracking-[0.38em] text-[#c9973f] uppercase sm:text-xs">
+          <span className="h-px w-8 bg-[#c9973f]" />
+          {swargam.subtitle}
+        </p>
       </div>
     </div>
   )
@@ -83,6 +108,25 @@ const rows: Row[] = [
     lead: true,
   },
   {
+    number: swargam.number,
+    type: `${swargam.type} · ${swargam.genreShort}`,
+    title: (
+      <>
+        Software Swargam
+        <span className="mt-3 block text-[0.42em] tracking-[0.02em] text-ivory/60 italic">Not for Employees</span>
+      </>
+    ),
+    credits: ['Written by Garikapati Siva Ramakrishna'],
+    status: swargam.status,
+    href: projectHref(swargam.slug),
+    description: swargam.description,
+    ctas: [
+      { label: 'View project', href: projectHref(swargam.slug) },
+      { label: 'Read synopsis (PDF)', href: swargam.synopsisPdf, external: true },
+    ],
+    visual: <SwargamCard />,
+  },
+  {
     number: myself.number,
     type: `${myself.type} · ${myself.year}`,
     title: (
@@ -129,7 +173,7 @@ export function SelectedWork() {
             </h2>
           </div>
           <p data-reveal style={delay(200)} className="max-w-sm text-ivory/60 sm:text-right">
-            A completed feature screenplay, a short film in production, and a released first film.
+            Two feature film projects, a short film in production, and a released first film.
           </p>
         </div>
 
@@ -161,6 +205,7 @@ export function SelectedWork() {
                   <div className="mt-6">
                     <Status>{r.status}</Status>
                   </div>
+                  {r.description && <p className="mt-6 max-w-md leading-relaxed text-ivory/65">{r.description}</p>}
                   {r.lead ? (
                     <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                       {r.ctas.map((c) => (
@@ -170,16 +215,18 @@ export function SelectedWork() {
                       ))}
                     </div>
                   ) : (
-                    r.ctas.map((c) => (
-                      <a
-                        key={c.label}
-                        href={c.href}
-                        {...ext(c.external)}
-                        className="eyebrow mt-10 inline-flex items-center gap-4 text-ivory transition-[gap] duration-500 hover:gap-6"
-                      >
-                        {c.label} <Arrow />
-                      </a>
-                    ))
+                    <div className="mt-10 flex flex-wrap gap-x-10 gap-y-5">
+                      {r.ctas.map((c) => (
+                        <a
+                          key={c.label}
+                          href={c.href}
+                          {...ext(c.external)}
+                          className="eyebrow inline-flex items-center gap-4 text-ivory transition-[gap] duration-500 hover:gap-6"
+                        >
+                          {c.label} <Arrow />
+                        </a>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>

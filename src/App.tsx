@@ -1,16 +1,18 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { Footer } from './components/Footer'
 import { Nav } from './components/Nav'
-import { myself, pentayya, person, seo } from './content/site'
+import { myself, pentayya, person, seo, swargam } from './content/site'
 import { useReveal } from './hooks/useReveal'
 import { scrollToSection, useRoute } from './lib/router'
 import { Home } from './pages/Home'
 import { MyselfPage } from './pages/MyselfPage'
 import { PentayyaPage } from './pages/PentayyaPage'
+import { SwargamPage } from './pages/SwargamPage'
 import { ProfilePage } from './pages/ProfilePage'
 
 const projectPages: Record<string, { el: () => React.JSX.Element; title: string }> = {
   [pentayya.slug]: { el: PentayyaPage, title: `${pentayya.title} — Feature Film | ${person.fullName}` },
+  [swargam.slug]: { el: SwargamPage, title: `${swargam.title} — ${swargam.subtitle} | Feature Film | ${person.fullName}` },
   [myself.slug]: { el: MyselfPage, title: `Myself – ${myself.subtitle} — Short Film | ${person.fullName}` },
 }
 

@@ -3,7 +3,7 @@ import { MaterialCard } from '../components/Material'
 import { ProjectNav } from '../components/ProjectNav'
 import { Arrow, Container, SectionLabel, Status } from '../components/ui'
 import { delay } from '../lib/motion'
-import { myself, pentayya, pentayyaFacts } from '../content/site'
+import { pentayya, pentayyaFacts, swargam } from '../content/site'
 import { asks, whatsapp } from '../lib/links'
 import { projectHref } from '../lib/router'
 
@@ -142,7 +142,7 @@ export function PentayyaPage() {
         </Container>
       </section>
 
-      <ProjectNav next={{ label: `Next — Project ${myself.number}`, title: `Myself – ${myself.subtitle}`, href: projectHref(myself.slug) }} />
+      <ProjectNav next={{ label: `Next — Project ${swargam.number}`, title: swargam.title, href: projectHref(swargam.slug) }} />
     </>
   )
 }

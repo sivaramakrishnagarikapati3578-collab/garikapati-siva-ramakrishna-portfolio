@@ -18,6 +18,7 @@ export const asks = {
   general: mailto('Hello from your portfolio', 'Hello Siva,\n\n'),
   pentayyaNarration: mailto('Narration request — PENTAYYA', `Hello Siva,\n\nI would like to hear a narration of PENTAYYA.${sign}Preferred date / place (or call):\n`),
   pentayyaScreenplay: mailto('Screenplay request — PENTAYYA', `Hello Siva,\n\nI would like to read the screenplay of PENTAYYA.${sign}`),
+  swargam: mailto('SOFTWARE SWARGAM — Not for Employees', `Hello Siva,\n\nI read the synopsis of SOFTWARE SWARGAM and would like to discuss it.${sign}`),
   myself: mailto('MYSELF – Brain vs Heart', `Hello Siva,\n\nI am writing about MYSELF – Brain vs Heart.${sign}`),
 }
 

@@ -190,9 +190,45 @@ export const pentayyaFacts: [string, string][] = [
   ['Screenplay', pentayya.pages],
 ]
 
+/** Feature film project — story source: the synopsis PDF in /public/projects/software-swargam/. */
+export const swargam = {
+  slug: 'software-swargam',
+  number: '02',
+  title: 'Software Swargam',
+  subtitle: 'Not for Employees',
+  type: 'Telugu Feature Film',
+  genre: 'Romantic Comedy | Workplace Comedy | Commercial Entertainer',
+  genreShort: 'Romantic Comedy',
+  roles: ['Writer'],
+  status: 'Feature film project · Synopsis available',
+  setting: 'Hyderabad, India',
+  /** Short, spoiler-free description for cards. */
+  description:
+    'An ambitious small-town engineering graduate enters Hyderabad’s software industry believing he has found his dream career. But when office politics, toxic leadership and an unexpected romance collide, he discovers that the promised corporate heaven comes at a price.',
+  logline:
+    'A small-town engineering graduate lands his dream job at a Hyderabad software company and believes he has reached heaven — until a jealous team lead turns the office into a nightmare, and the fresher who once worshipped his boss decides to rewrite the rules himself.',
+  characters: [
+    { name: 'Tony', note: 'Thota Narayana — a witty small-town engineering graduate on his first software job' },
+    { name: 'Niharika', note: 'His mentor — disciplined, quietly brilliant, focused on the work' },
+    { name: 'Mohith', note: 'The team lead — controlling, jealous, and quick to misuse his authority' },
+    { name: 'Devi', note: 'Tony’s PG roommate and closest friend' },
+  ],
+  /** Website synopsis, condensed from the PDF. `story` is shown openly; `ending` sits behind a reveal. */
+  story: [
+    'For Thota Narayana — Tony to everyone who knows him — a year of job-hunting after his B.Tech ends with an offer from Seven Stars Information and Technology in Hyderabad. Tony is certain he has been admitted to heaven. He moves into a paying-guest room with Devi, arrives at the office before the watchman, and saves his team lead’s number not as “Team Lead” but as “The Lord.”',
+    'The one person he cannot charm is Niharika, the disciplined engineer assigned as his mentor: every day he asks whether she has eaten, every day she asks whether he has finished his work. When a faulty commit of his crashes production and Mohith humiliates her for it, Tony stays until 1:30 a.m. to put it right — and Niharika begins to see who he really is. A Dasara celebration and a midnight birthday surprise in an empty office bring them closer.',
+    'Mohith, who has long wanted Niharika for himself, turns jealousy into policy: impossible deadlines, midnight assignments, public contempt. The fresher who once worshipped the office starts coming home at three in the morning. A near-violent confrontation ends with Tony’s resignation — and a painful rift with Niharika, who still trusts Mohith. Serving his notice, Tony stops pretending. Then Mohith harasses Niharika after she rejects his proposal, Tony steps in, and she finally sees Mohith for who he is.',
+  ],
+  ending: [
+    'The company’s answer is a pink slip. Tony confronts Mohith and the management in front of the whole floor and refuses to trade his self-respect for a salary. But he does not leave quietly: on his way out, he deliberately pushes faulty code into production — no accident and no routine bug, but a calculated, reckless act of revenge.',
+    'The next morning the application is down and the office is empty: the employees have walked out on strike against the culture that crushed him. With nowhere left to turn, the CEO calls Tony back, and Tony returns to set terms — dignity for employees, an end to the toxic culture, Mohith removed as team lead and Niharika in his place. The CEO accepts every condition. The software swargam Tony dreamed of finally exists — because its employees forced open the door.',
+  ],
+  synopsisPdf: '/projects/software-swargam/Software_Swargam_Story_Synopsis.pdf',
+}
+
 export const myself = {
   slug: 'myself',
-  number: '02',
+  number: '03',
   title: 'Myself',
   subtitle: 'Brain vs Heart',
   type: 'Independent Short Film',
@@ -244,7 +280,7 @@ export const myself = {
 
 export const tfi = {
   slug: 'tfi',
-  number: '03',
+  number: '04',
   title: 'TFI',
   subtitle: 'Telugodi Fan Ism',
   type: 'Independent Short Film',
