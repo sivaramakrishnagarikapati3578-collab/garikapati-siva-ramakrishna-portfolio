@@ -2,7 +2,7 @@ import { SectionLink } from '../components/Nav'
 import { ProjectNav } from '../components/ProjectNav'
 import { Arrow, Container, SectionLabel, Status } from '../components/ui'
 import { delay } from '../lib/motion'
-import { myself, person, swargam } from '../content/site'
+import { attack, person, swargam } from '../content/site'
 import { asks } from '../lib/links'
 import { projectHref } from '../lib/router'
 
@@ -151,7 +151,7 @@ export function SwargamPage() {
         </Container>
       </section>
 
-      <ProjectNav next={{ label: `Next — Project ${myself.number}`, title: `Myself – ${myself.subtitle}`, href: projectHref(myself.slug) }} />
+      <ProjectNav next={{ label: `Next — Project ${attack.number}`, title: attack.title, href: projectHref(attack.slug) }} />
     </>
   )
 }

@@ -226,9 +226,31 @@ export const swargam = {
   synopsisPdf: '/projects/software-swargam/Software_Swargam_Story_Synopsis.pdf',
 }
 
+/**
+ * Feature film project in development. Public details are intentionally high-level:
+ * no character names, plot events or ending until the writer approves them.
+ */
+export const attack = {
+  slug: 'attack',
+  number: '03',
+  title: 'Attack',
+  type: 'Telugu Feature Film',
+  genre: 'Action Thriller',
+  roles: ['Writer'],
+  status: 'In Development',
+  /** Short, card-length description. */
+  short: 'A military officer confronts a university hostage crisis while facing deeply personal emotional stakes.',
+  /** Provisional logline. */
+  logline:
+    'When a university becomes the centre of a terrifying hostage crisis, a military officer must confront a deadly threat while navigating a deeply personal emotional conflict.',
+  about:
+    'ATTACK is an original Telugu feature-film concept that combines military action, suspense, a university hostage crisis and family drama. The story aims to explore not only the external danger of the crisis but also the emotional pressures and personal stakes faced by the people caught within it.',
+  elements: ['A university hostage crisis', 'A military officer facing a dangerous threat', 'Family relationships and emotional conflict', 'High-stakes action and suspense'],
+}
+
 export const myself = {
   slug: 'myself',
-  number: '03',
+  number: '04',
   title: 'Myself',
   subtitle: 'Brain vs Heart',
   type: 'Independent Short Film',
@@ -280,7 +302,7 @@ export const myself = {
 
 export const tfi = {
   slug: 'tfi',
-  number: '04',
+  number: '05',
   title: 'TFI',
   subtitle: 'Telugodi Fan Ism',
   type: 'Independent Short Film',

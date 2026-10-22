@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { Picture } from '../components/Picture'
 import { Arrow, Container, Credit, SectionLabel, Status } from '../components/ui'
 import { delay } from '../lib/motion'
-import { contact, myself, pentayya, swargam, tfi } from '../content/site'
+import { attack, contact, myself, pentayya, swargam, tfi } from '../content/site'
 import { asks } from '../lib/links'
 import { projectHref } from '../lib/router'
 
@@ -56,6 +56,26 @@ function SwargamCard() {
         <p className="mt-4 flex items-center gap-3 text-[0.65rem] font-medium tracking-[0.38em] text-[#c9973f] uppercase sm:text-xs">
           <span className="h-px w-8 bg-[#c9973f]" />
           {swargam.subtitle}
+        </p>
+      </div>
+    </div>
+  )
+}
+
+/** ATTACK — typographic card in charcoal and signal red. No poster: the film is in development. */
+function AttackCard() {
+  return (
+    <div className="absolute inset-0 flex flex-col justify-between bg-[#151515] p-6 sm:p-10">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_100%,rgba(192,57,43,0.28),transparent_60%)]" />
+      <p className="eyebrow relative flex justify-between text-ivory/55">
+        <span>A feature film project</span>
+        <span className="hidden sm:inline">{attack.status}</span>
+      </p>
+      <div className="relative">
+        <p className="font-sans text-[3.6rem] leading-[0.85] font-semibold tracking-[0.04em] text-ivory uppercase sm:text-[6rem] lg:text-[7.5rem]">{attack.title}</p>
+        <span className="mt-5 block h-[3px] w-16 bg-[#c0392b]" />
+        <p className="eyebrow mt-4 text-ivory/55">
+          {attack.type} · {attack.genre}
         </p>
       </div>
     </div>
@@ -127,6 +147,17 @@ const rows: Row[] = [
     visual: <SwargamCard />,
   },
   {
+    number: attack.number,
+    type: `${attack.type} · ${attack.genre}`,
+    title: attack.title,
+    credits: ['Written by Garikapati Siva Ramakrishna'],
+    status: attack.status,
+    href: projectHref(attack.slug),
+    description: attack.short,
+    ctas: [{ label: 'View project', href: projectHref(attack.slug) }],
+    visual: <AttackCard />,
+  },
+  {
     number: myself.number,
     type: `${myself.type} · ${myself.year}`,
     title: (
@@ -173,7 +204,7 @@ export function SelectedWork() {
             </h2>
           </div>
           <p data-reveal style={delay(200)} className="max-w-sm text-ivory/60 sm:text-right">
-            Two feature film projects, a short film in production, and a released first film.
+            Three feature film projects, a short film in production, and a released first film.
           </p>
         </div>
 
