@@ -4,8 +4,8 @@
  *
  *  After editing anything here, regenerate the PDF:   npm run profile:pdf
  *
- *  Photo: replace /public/images/siva/web/profile-sheet.jpg (PDF) and
- *  profile-full.webp (web page), then run `npm run profile:pdf`.
+ *  Photo: replace /public/images/siva/shoot-2026/resume-headshot.jpg (PDF) and
+ *  profile-standing-full.webp (web page), then run `npm run profile:pdf`.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 import { availability, contact, isAvailabilityShown, myself, pentayya, person, tfi, writing as siteWriting } from './site'
@@ -17,15 +17,15 @@ export const profile = {
 
   /**
    * Pre-cropped JPEG (JPEG keeps the PDF small). Web version uses the full photo.
-   * New photo: replace public/images/siva/web/profile-sheet.jpg, then run `npm run profile:pdf`.
+   * New photo: replace public/images/siva/shoot-2026/resume-headshot.jpg, then run `npm run profile:pdf`.
    */
   portrait: {
-    src: '/images/siva/web/profile-sheet.jpg',
-    webSrc: '/images/siva/web/profile-full.webp',
-    alt: 'Garikapati Siva Ramakrishna in a black suit',
+    src: '/images/siva/shoot-2026/resume-headshot.jpg',
+    webSrc: '/images/siva/shoot-2026/profile-standing-full.webp',
+    alt: 'Garikapati Siva Ramakrishna, head-and-shoulders portrait in a black shirt',
     /** object-position for the crop — keeps the face in frame. */
-    position: '50% 0%',
-    webPosition: '50% 12%',
+    position: '50% 20%',
+    webPosition: '50% 34%',
   },
 
   bio: [

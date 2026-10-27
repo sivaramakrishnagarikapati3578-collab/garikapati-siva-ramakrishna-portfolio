@@ -82,5 +82,5 @@ npm run profile:pdf
 
 Personal photos: originals live in `public/images/siva/`; the web-ready copies used by the site are in
 `public/images/siva/web/` (About, Vision, Contact, Profile). To change the one-sheet portrait, replace
-`public/images/siva/web/profile-sheet.jpg` (portrait JPEG, ≈ 0.61 width/height, ~700 px wide), adjust
+`public/images/siva/shoot-2026/resume-headshot.jpg` (portrait JPEG, ≈ 0.70 width/height, ~760 px wide), adjust
 `portrait.position` in `profile.ts` if needed, then run `npm run profile:pdf`.

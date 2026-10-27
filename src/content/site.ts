@@ -77,10 +77,10 @@ export const photos = {
     positionMobile: '50% 20%',
   },
   about: {
-    src: '/images/siva/web/about-full.webp',
-    srcSmall: '/images/siva/web/about-800.webp',
-    alt: 'Garikapati Siva Ramakrishna, close portrait looking at the camera',
-    position: '45% 35%',
+    src: '/images/siva/shoot-2026/about-portrait-full.webp',
+    srcSmall: '/images/siva/shoot-2026/about-portrait-800.webp',
+    alt: 'Garikapati Siva Ramakrishna, three-quarter portrait in a black shirt, looking off-frame',
+    position: '50% 30%',
   },
   vision: {
     src: '/images/siva/web/vision-full.webp',
@@ -389,7 +389,13 @@ export const acting = {
    *   photos:  acting stills, e.g. { src: '/images/acting/still-01.webp', alt: '…' }
    */
   reelUrl: '',
-  photos: [] as Photo[],
+  photos: [
+    { src: '/images/siva/shoot-2026/acting-intense-full.webp', srcSmall: '/images/siva/shoot-2026/acting-intense-800.webp', alt: 'Portrait still — intense expression, direct gaze', position: '50% 30%' },
+    { src: '/images/siva/shoot-2026/acting-warm-full.webp', srcSmall: '/images/siva/shoot-2026/acting-warm-800.webp', alt: 'Portrait still — warm smile, looking away', position: '50% 30%' },
+    { src: '/images/siva/shoot-2026/acting-surprise-full.webp', srcSmall: '/images/siva/shoot-2026/acting-surprise-800.webp', alt: 'Portrait still — surprised expression', position: '50% 30%' },
+  ] as Photo[],
+  /** Caption for the stills above (portfolio shoot, not stills from a film role). */
+  photosCaption: 'Portrait stills · 2026',
 }
 
 export const dialogue = {

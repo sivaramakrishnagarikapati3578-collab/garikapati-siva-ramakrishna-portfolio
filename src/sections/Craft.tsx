@@ -80,13 +80,16 @@ export function Craft() {
               </div>
             )}
             {acting.photos.length > 0 && (
-              <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {acting.photos.map((p) => (
-                  <div key={p.src} className="relative aspect-[4/5] overflow-hidden bg-ink-3">
-                    <Picture photo={p} sizes="(min-width:1024px) 15vw, 45vw" />
-                  </div>
-                ))}
-              </div>
+              <figure className="mt-8">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                  {acting.photos.map((p) => (
+                    <div key={p.src} className="relative aspect-[4/5] overflow-hidden bg-ink-3">
+                      <Picture photo={p} sizes="(min-width:1024px) 12vw, 30vw" />
+                    </div>
+                  ))}
+                </div>
+                <figcaption className="eyebrow mt-3 !text-[0.6rem] text-ivory/45">{acting.photosCaption}</figcaption>
+              </figure>
             )}
           </article>
 
